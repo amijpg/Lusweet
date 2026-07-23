@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lusweet | Dulcería</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF3EC;
+    --rose:#E8B4B8;
+    --rose-deep:#C97F86;
+    --plum:#4A2E35;
+    --gold:#C7952F;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{height:100%;}
+  body{
+    background:
+      radial-gradient(circle at 20% 15%, rgba(232,180,184,0.35), transparent 45%),
+      radial-gradient(circle at 85% 80%, rgba(199,149,47,0.18), transparent 40%),
+      var(--cream);
+    font-family:'Jost', sans-serif;
+    color:var(--plum);
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+  }
+
+  .card{
+    width:100%;
+    max-width:420px;
+    background:#fffaf5;
+    border-radius:28px;
+    padding:48px 32px 40px;
+    text-align:center;
+    box-shadow:0 30px 60px -20px rgba(74,46,53,0.25);
+    position:relative;
+    overflow:hidden;
+  }
+
+  .card::before{
+    content:"";
+    position:absolute;
+    top:-60px;
+    left:50%;
+    transform:translateX(-50%);
+    width:220px;
+    height:220px;
+    background:radial-gradient(circle, rgba(232,180,184,0.5), transparent 70%);
+    z-index:0;
+  }
+
+  .seal{
+    position:relative;
+    z-index:1;
+    width:84px;
+    height:84px;
+    margin:0 auto 18px;
+    border-radius:50%;
+    background:linear-gradient(160deg, var(--rose-deep), var(--rose));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 8px 20px -6px rgba(201,127,134,0.6);
+  }
+
+  .seal span{
+    font-family:'Cormorant Garamond', serif;
+    font-size:38px;
+    font-weight:700;
+    color:#fffaf5;
+    letter-spacing:1px;
+  }
+
+  h1{
+    position:relative;
+    z-index:1;
+    font-family:'Cormorant Garamond', serif;
+    font-weight:700;
+    font-size:44px;
+    letter-spacing:2px;
+    color:var(--plum);
+  }
+
+  .tagline{
+    position:relative;
+    z-index:1;
+    font-size:13px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--rose-deep);
+    margin-top:6px;
+    margin-bottom:34px;
+  }
+
+  .divider{
+    width:60px;
+    height:1px;
+    background:var(--gold);
+    margin:0 auto 34px;
+    opacity:.6;
+  }
+
+  .links{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    position:relative;
+    z-index:1;
+  }
+
+  .btn{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    text-decoration:none;
+    padding:16px 20px;
+    border-radius:16px;
+    font-size:15px;
+    font-weight:500;
+    letter-spacing:.3px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+
+  .btn:hover{ transform:translateY(-2px); }
+  .btn:active{ transform:translateY(0); }
+
+  .btn .icon{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+  }
+
+  .btn .label{ text-align:left; }
+  .btn .label small{
+    display:block;
+    font-size:11px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    opacity:.65;
+    margin-bottom:2px;
+  }
+
+  .btn-whatsapp{
+    background:#EAF6EE;
+    color:#1F5C3A;
+    box-shadow:0 6px 16px -8px rgba(37,120,71,0.35);
+  }
+  .btn-whatsapp .icon{ background:#25D366; }
+
+  .btn-instagram{
+    background:#FBEDF3;
+    color:#8A2A57;
+    box-shadow:0 6px 16px -8px rgba(188,41,110,0.35);
+  }
+  .btn-instagram .icon{
+    background:linear-gradient(135deg,#F58529,#DD2A7B,#8134AF,#515BD4);
+  }
+
+  .icon svg{ width:19px; height:19px; }
+
+  footer{
+    position:relative;
+    z-index:1;
+    margin-top:32px;
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--rose-deep);
+    opacity:.7;
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="seal"><span>L</span></div>
+    <h1>LUSWEET</h1>
+    <div class="tagline">Repostería &amp; Dulcería</div>
+    <div class="divider"></div>
+
+    <div class="links">
+      <a class="btn btn-whatsapp" href="https://wa.me/56961460487" target="_blank" rel="noopener">
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="#ffffff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14a8.24 8.24 0 0 1-5.8 2.4h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.13.82.84-3.05-.2-.31a8.18 8.18 0 0 1-1.26-4.38c0-4.53 3.7-8.22 8.25-8.22 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.8c0 4.53-3.7 8.22-8.25 8.22zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.65.81-.8.98-.15.17-.29.19-.54.06-.25-.12-1.06-.39-2.02-1.24-.75-.66-1.25-1.48-1.4-1.73-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.44.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.23.89 2.41 1.02 2.58.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/></svg>
+        </span>
+        <span class="label"><small>WhatsApp</small>Escríbenos para pedidos</span>
+      </a>
+
+      <a class="btn btn-instagram" href="https://www.instagram.com/lusweet.dulceria/?hl=es" target="_blank" rel="noopener">
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="#ffffff"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.39C1.35 2.68.94 3.35.63 4.14c-.3.76-.5 1.64-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.39 2.13.67.67 1.34 1.08 2.13 1.39.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.39.67-.67 1.08-1.34 1.39-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.39-2.13C21.32 1.35 20.65.94 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.41-10.44a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z"/></svg>
+        </span>
+        <span class="label"><small>Instagram</small>@lusweet.dulceria</span>
+      </a>
+    </div>
+
+    <footer>Hecho con dulzura</footer>
+  </div>
+
+</body>
+</html>
